@@ -1,0 +1,42 @@
+﻿@page
+@model FreakyFashion.ProductModel
+@{
+    ViewData["Title"] = "Product";
+}
+
+
+
+
+    <div class="container">
+        <h1 class="text-center">Product</h1>
+        <div class="row">
+            <div class="col-6">
+                <img src="@Model.product.image" alt="" />
+            </div>
+            <div class="col-6">
+                <ul class="list-group pt-4">
+                    <li class="list-group-item  border-0">Name: @Model.product.Name</li>
+
+                    <li class="list-group-item  border-0">Description: @Model.product.Description</li>
+
+                    <li class="list-group-item  border-0">Price:product.Price</li>
+
+                    <li class="list-group-item  border-0">Type: @Model.product.Price</li>
+
+                    <li class="list-group-item  border-0">
+                        <a class="btn btn-dark" asp-page="">
+                            Buy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<partial name="_RecommendedProducts" model="Model.Products" />
+
+<style>
+  .col-6  img{
+        height: 500px;
+    }
+</style>

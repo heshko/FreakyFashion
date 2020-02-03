@@ -1,0 +1,36 @@
+﻿@page
+@model FreakyFashion.KlänningarModel
+@{
+    ViewData["Title"] = "Klänningar";
+}
+
+
+
+    <div class="container">
+        <h1 class="text-center">@Model.type</h1>
+        <div class="row">
+            @foreach (var product in Model.Products)
+            {
+            <div class="col-3 mb-4">
+                <img class="w-100" src="@product.image" alt="Alternate Text" />
+
+                <ul class="list-group pt-4">
+                    <li class="list-group-item  border-0">Name:@product.Name</li>
+
+                    <li class="list-group-item  border-0">Description:@product.Description</li>
+
+                    <li class="list-group-item  border-0">Price:@product.Price</li>
+
+
+                </ul>
+             
+            </div>
+            }
+        </div>
+        </div>
+
+<style>
+    .col-3 img{
+        height:400px
+    }
+</style>

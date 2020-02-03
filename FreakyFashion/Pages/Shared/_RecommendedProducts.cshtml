@@ -1,0 +1,35 @@
+﻿@using FreakyFashion.Models
+@model List<Product>
+@{ 
+    
+}
+    <h1>Recommnderat för dig </h1>
+    <div class="container">
+        <div class="row">
+          
+              @for(var x =1; x < 5; x++)
+              {
+            <div class="col-3">
+
+                <img class="w-100" src="@Model[x].image" alt="Alternate Text" />
+
+                <ul class="list-group pt-4">
+                    <li class="list-group-item  border-0">Name:@Model[x].Name</li>
+
+                    <li class="list-group-item  border-0">Description: @Model[x].Description</li>
+
+                    <li class="list-group-item  border-0">Price:@Model[x].Price</li>
+
+                </ul>
+            </div>
+              }
+        </div>
+    </div>
+
+
+<style>
+    .col-3 img
+    {
+       height:400px;
+    }
+</style>

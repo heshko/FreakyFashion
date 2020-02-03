@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FreakyFashion</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/fontawesome.min.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white ">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/06/fashion-logos.jpg" width="100" height="80" alt="">
+                </a>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="LoggIn shoppIcon">
+                    <partial name="_LoginPartial" />
+                </div>
+               
+            </div>
+        </nav>
+        <nav  class="navbar navbar-expand-sm navbar-toggleable-sm bg-white  border-bottom  mb-3">
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+              
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item ">
+                        <a class="nav-link text-primary" asp-area="" asp-page="/Index">Hem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" asp-area="" asp-page="">Nyheter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" asp-area="" asp-page="/">Rea</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" asp-area="" asp-page="/">Klänningar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" asp-area="" asp-page="/">Bluser</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top  ">
+        <div class="container">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item border-0"><img src="#" alt="Alternate Text" />Gratis frakt and returer</li>
+                <li class="list-group-item border-0"><img src="#" alt="Alternate Text" />ExpressFrakt</li>
+                <li class="list-group-item border-0"><img src="#" alt="Alternate Text" />Sakra Betalningar</li>
+                <li class="list-group-item border-0"><img src="#" alt="Alternate Text" />Nyheter Varje Dag</li>
+            </ul>
+            <div class="row">
+                <ul class="col-4">
+                    <li><img src="#" alt="Alternate Text" />Gratis frakt and returer</li>
+                    <li><img src="#" alt="Alternate Text" />ExpressFrakt</li>
+                    <li><img src="#" alt="Alternate Text" />Sakra Betalningar</li>
+                    <li><img src="#" alt="Alternate Text" />Nyheter Varje Dag</li>
+                </ul>
+                <ul class="col-4">
+                    <li><img src="#" alt="Alternate Text" />Gratis frakt and returer</li>
+                    <li><img src="#" alt="Alternate Text" />ExpressFrakt</li>
+                  
+                </ul>
+            </div>
+          
+            <h1 class="text-center">CopyRight 2020 Freaky Fashion</h1>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

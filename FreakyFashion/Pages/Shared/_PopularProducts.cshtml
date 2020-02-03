@@ -1,0 +1,35 @@
+﻿@using FreakyFashion.Models
+@model List<Product>
+
+
+
+    <div class="container">
+        <h1 class="text-center">Populära Produkter</h1>
+        <div class="row">
+            @foreach (var product in Model)
+            {
+                if (product.Id < 9)
+                {
+                    <div class="col-3">
+                        <img class="w-100" src="@product.image" alt="Alternate Text" />
+
+                        <ul class="list-group pt-4">
+                            <li class="list-group-item  border-0">Name:@product.Name</li>
+
+                            <li class="list-group-item  border-0">Description:@product.Description</li>
+
+                        </ul>
+                    </div>
+                }
+
+            }
+
+        </div>
+    </div>
+
+
+<style>
+    .col-3 img{
+        height: 400px;
+    }
+</style>
